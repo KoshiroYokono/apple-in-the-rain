@@ -12,6 +12,7 @@ gem 'webpacker', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 gem 'httpclient'
 gem 'dotenv-rails'
+gem 'ridgepole'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
