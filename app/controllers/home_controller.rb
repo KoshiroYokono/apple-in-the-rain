@@ -1,12 +1,16 @@
 class HomeController < ApplicationController
   def new
-    open_weather = Api::OpenWeatherMap::Request.new
-    response = open_weather.request
-    weather_id = Api::OpenWeatherMap::Request.weather_id_from(response: response)
-    if weather_id == 800
-      @is_rainning = false
+    weather = Weather.first
+    unless weather.nil?
+      
+      weather_id = weather.weather_id
+      if weather_id == 800
+        @is_rainning = false
+      else
+        @is_rainning = true
+      end
     else
-      @is_rainning = true
+      @is_rainning = false
     end
   end
 end
