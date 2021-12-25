@@ -1,4 +1,4 @@
 create_table :weathers do |t|
-  t.int :weather_id,
+  t.integer :weather_id,
         null: false
 end

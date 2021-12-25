@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'httpclient'
 gem 'dotenv-rails'
 gem 'ridgepole'
+gem 'whenever', require: false
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

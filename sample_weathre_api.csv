@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 139.6826,
+    "lat": 35.7413
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 281.98,
+    "feels_like": 280.46,
+    "temp_min": 279.33,
+    "temp_max": 284.61,
+    "pressure": 1017,
+    "humidity": 43
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 2.68,
+    "deg": 0,
+    "gust": 5.81
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1638628248,
+  "sys": {
+    "type": 2,
+    "id": 2001249,
+    "country": "JP",
+    "sunrise": 1638567317,
+    "sunset": 1638602868
+  },
+  "timezone": 32400,
+  "id": 1864231,
+  "name": "Egota",
+  "cod": 200
+}
