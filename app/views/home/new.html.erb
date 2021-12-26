@@ -1,5 +1,9 @@
 <div class="container">
-  <%= image_pack_tag('media/images/winter_apple.png', class: "image") %>
+  <%if @is_cloudy%>
+  <%= image_pack_tag('media/images/real_cloud1.png', class: "cloud1") %>
+  <%= image_pack_tag('media/images/real_cloud2.png', class: "cloud2") %>
+  <%end%>
+  <%= image_pack_tag('media/images/winter_apple_skelton.png', class: "image") %>
   <%if @is_raining%>
   <div class="rains">
     <span></span><span></span><span></span><span></span><span></span>
