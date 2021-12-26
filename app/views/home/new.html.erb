@@ -1,6 +1,6 @@
 <div class="container">
   <%= image_pack_tag('media/images/winter_apple.png', class: "image") %>
-  <%unless @is_raining%>
+  <%if @is_raining%>
   <div class="rains">
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
