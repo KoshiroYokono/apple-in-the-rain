@@ -35,5 +35,8 @@ module Portfolio
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.paths.add 'lib', eager_load: true
+    confg.to_prepare do
+      load Rails.root.join('lib/monkey_patches/ridgepole.rb')
+    end
   end
 end
