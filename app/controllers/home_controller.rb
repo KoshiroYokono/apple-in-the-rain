@@ -4,9 +4,9 @@ class HomeController < ApplicationController
     unless weather.nil?
       weather_id = weather.weather_id
       if weather_id == 800
-        @is_rainning = false
+        @is_raining = false
       else
-        @is_rainning = true
+        @is_raining = true
       end
     else
       @is_rainning = false
