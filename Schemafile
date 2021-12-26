@@ -1,4 +1,6 @@
-require "lib/monkey_patches/ridgepole.rb"
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 
+require File.expand_path('lib/monkey_patches/ridgepole.rb', File.dirname(__FILE__))
 require "db/schemata/weathers.rb"
 
