@@ -20,6 +20,7 @@ body {
   width: 70%;
   object-fit: cover;
   overflow: hidden;
+  animation: cloud1-loop 220s linear infinite;
 }
 
 .cloud2 {
@@ -30,6 +31,7 @@ body {
   width: 75%;
   object-fit: cover;
   overflow: hidden;
+  animation: cloud2-loop 220s linear infinite;
 }
 
 .container{
@@ -97,7 +99,7 @@ body {
 .rains span:nth-child(17){left:85%; top:-210px; animation: rain-anim 13s infinite;}
 .rains span:nth-child(18){left:90%; top:-220px; animation: rain-anim 14s infinite;}
 .rains span:nth-child(19){left:95%; top:-230px; animation: rain-anim 16s infinite;}
-.rains span:nth-child(20){left:100%; top:-240px; animation: rain-anim9 17s infinite;}
+.rains span:nth-child(20){left:100%; top:-240px; animation: rain-anim 17s infinite;}
 
 /*アニメーションキーフレーム
 一度落下したら次はキーフレーム1%の間に高さを戻して左右にずらして降らす*/
@@ -163,6 +165,28 @@ body {
   100% { transform: translate(0px,0px);}
   
 }
+
+@keyframes cloud1-loop {
+  0% {
+    transform: translateX(145%);
+  }
+  to {
+    transform: translateX(-185%);
+  }
+}
+
+@keyframes cloud2-loop {
+  0% {
+    transform: translateX(185%);
+  }
+  to {
+    transform: translateX(-130%);
+  }
+}
+
+// .cloudy-images {
+//   animation: loop 3s linear infinite;
+// }
 
 // .bg_test {
 //   width: 100%;
