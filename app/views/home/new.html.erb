@@ -4,6 +4,9 @@
   <%= image_pack_tag('media/images/real_cloud2.png', class: "cloud2") %>
   <%end%>
   <%= image_pack_tag('media/images/winter_apple_skelton.png', class: "image") %>
+  <%if @is_cherry_bllosoming%>
+  <%= image_pack_tag('media/images/cherry_blossom.gif', class: "image")%>
+  <%end%>
   <%if @is_raining%>
   <div class="rains">
     <span></span><span></span><span></span><span></span><span></span>
