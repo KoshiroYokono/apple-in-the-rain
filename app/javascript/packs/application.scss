@@ -65,7 +65,6 @@ body {
   transform: rotate(20deg);
 }
 
-/*widthは雨の太さ、heightは長さ*/
 .rains span{
   position: absolute;
   width:3px;
@@ -74,9 +73,26 @@ body {
   opacity:0.4;
 }
 
+.snows{
+  position: absolute;
+  top:-20px;
+  width: 100%;
+  height:100%;
+}
+
+.snows span{
+  position: absolute;
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  background:#000;
+  animation: snow-anim 16s linear infinite;
+}
+
+/*widthは雨の太さ、heightは長さ*/
 
 
- /*雨の初期位置とアニメーション指定、leftはx座標での基準位置、topは開始位置、アニメーション時間は揺らぎ*/
+
 .rains span:nth-child(1){left:5%; top:-240px; animation: rain-anim 20s infinite;}
 .rains span:nth-child(2){left:10%; top:-230px; animation: rain-anim 21s infinite;}
 .rains span:nth-child(3){left:15%; top:-220px; animation: rain-anim 18s infinite;}
@@ -100,6 +116,54 @@ body {
 .rains span:nth-child(18){left:90%; top:-220px; animation: rain-anim 14s infinite;}
 .rains span:nth-child(19){left:95%; top:-230px; animation: rain-anim 16s infinite;}
 .rains span:nth-child(20){left:100%; top:-240px; animation: rain-anim 17s infinite;}
+
+ /*雨の初期位置とアニメーション指定、leftはx座標での基準位置、topは開始位置、アニメーション時間は揺らぎ*/
+.snows span:nth-child(1){left:5%;}
+.snows span:nth-child(2){left:10%; animation-delay: 15s;}
+.snows span:nth-child(3){left:15%; animation-delay: 50s;}
+.snows span:nth-child(4){left:20%; animation-delay: 5s;}
+.snows span:nth-child(5){left:25%; animation-delay: 28s;}
+
+.snows span:nth-child(6){left:30%; animation-delay: 8s;}
+.snows span:nth-child(7){left:35%;animation-delay: 47s;}
+.snows span:nth-child(8){left:40%; animation-delay: 5s;}
+.snows span:nth-child(9){left:45%; animation-delay: 25s;}
+.snows span:nth-child(10){left:50%; animation-delay: 19s;}
+
+.snows span:nth-child(11){left:55%; animation-delay: 46s;}
+.snows span:nth-child(12){left:60%; animation-delay: 10s;}
+.snows span:nth-child(13){left:65%; animation-delay: 22s;}
+.snows span:nth-child(14){left:70%; animation-delay: 3s;}
+.snows span:nth-child(15){left:75%; animation-delay: 8s;}
+
+.snows span:nth-child(16){left:80%; animation-delay: 8s;}
+.snows span:nth-child(17){left:85%; animation-delay: 7s;}
+.snows span:nth-child(18){left:90%; animation-delay: 16s;}
+.snows span:nth-child(19){left:95%; animation-delay: 31s;}
+.snows span:nth-child(20){left:100%; animation-delay: 37s;}
+
+.snows span:nth-child(2){left:10%; animation-delay: 18s;}
+.snows span:nth-child(3){left:15%; animation-delay: 56s;}
+.snows span:nth-child(4){left:20%; animation-delay: 38s;}
+.snows span:nth-child(5){left:25%; animation-delay: 1s;}
+
+.snows span:nth-child(6){left:30%; animation-delay: 8s;}
+.snows span:nth-child(7){left:35%; animation-delay: 4s;}
+.snows span:nth-child(8){left:40%; animation-delay: 12s;}
+.snows span:nth-child(9){left:45%; animation-delay: 45s;}
+.snows span:nth-child(10){left:50%; animation-delay: 21s;}
+
+.snows span:nth-child(11){left:55%; animation-delay: 36s;}
+.snows span:nth-child(12){left:60%; animation-delay: 8s;}
+.snows span:nth-child(13){left:65%; animation-delay: 19s;}
+.snows span:nth-child(14){left:70%; animation-delay: 9s;}
+.snows span:nth-child(15){left:75%; animation-delay: 44s;}
+
+.snows span:nth-child(16){left:80%; animation-delay: 34s;}
+.snows span:nth-child(17){left:85%; animation-delay: 10s;}
+.snows span:nth-child(18){left:90%; animation-delay: 2s;}
+.snows span:nth-child(19){left:95%; animation-delay: 59s;}
+.snows span:nth-child(20){left:100%; animation-delay: 8s;}
 
 /*アニメーションキーフレーム
 一度落下したら次はキーフレーム1%の間に高さを戻して左右にずらして降らす*/
@@ -164,6 +228,11 @@ body {
 
   100% { transform: translate(0px,0px);}
   
+}
+
+@keyframes snow-anim {
+  0% { transform: translateY(-10px);}
+  100% { transform: translateY(1000px);}
 }
 
 @keyframes cloud1-loop {
