@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
   def new
     weather = Weather.last
+    @is_clear = false
     @is_raining = false
     @is_snowing = false
+    @is_cloudy = false
     unless weather.nil?
       weather_id = weather.weather_id
       @is_cherry_bllosoming = spring_now?
@@ -13,6 +15,7 @@ class HomeController < ApplicationController
         @is_raining = true
         @is_cloudy = true
       elsif weather_id == 800
+        @is_clear = true
         @is_raining = false
         @is_cloudy = false
       else

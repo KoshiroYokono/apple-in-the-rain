@@ -3,7 +3,11 @@
   <%= image_pack_tag('media/images/real_cloud1.png', class: "cloud1") %>
   <%= image_pack_tag('media/images/real_cloud2.png', class: "cloud2") %>
   <%end%>
+  <%if @is_clear%>
+  <%= image_pack_tag('media/images/sky_apple.png', class: "image") %>
+  <%else%>
   <%= image_pack_tag('media/images/winter_apple_skelton.png', class: "image") %>
+  <%end%>
   <%if @is_cherry_bllosoming%>
   <%= image_pack_tag('media/images/cherry_blossom.gif', class: "image")%>
   <%end%>
