@@ -34,6 +34,16 @@ body {
   animation: cloud2-loop 220s linear infinite;
 }
 
+.air-plain {
+  top: 10%;
+  right: -2%;
+  position: fixed;
+  width: 2%;
+  object-fit: cover;
+  overflow: hidden;
+  animation: air-plain-loop 70s linear infinite;
+}
+
 .container{
   top: 0;
   left: 0;
@@ -250,6 +260,15 @@ body {
   }
   to {
     transform: translateX(-130%);
+  }
+}
+
+@keyframes air-plain-loop {
+  0% {
+    transform: translateX(102%);
+  }
+  to {
+    transform: translateX(-11000%);
   }
 }
 
