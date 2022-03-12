@@ -37,13 +37,16 @@
 <script>
   const realApple = document.getElementById('appleClicked');
 
-  realApple.addEventListener('mousedown', appearApple);
-  function appearApple(e) {
-    e.target.style.opacity = 1;
-  }
-  realApple.addEventListener('mouseup', disAppearApple);
-  function disAppearApple(e) {
-    e.target.style.opacity = 0;
-  }
+  //ボタンがクリックされた時
+  realApple.addEventListener('click', changeAppleImage);
+  function changeAppleImage(e) {
+    if (e.target.classList.contains('clicked')) {
+      e.target.classList.remove("clicked");
+      e.target.style.opacity = 0;
+    } else {
+      e.classList.add("clicked");
+      e.target.style.opacity = 1;
+    }
+  };
 </script>
 
