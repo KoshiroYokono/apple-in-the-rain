@@ -99,6 +99,11 @@ body {
   animation: snow-anim 16s linear infinite;
 }
 
+.real-apple {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 /*widthは雨の太さ、heightは長さ*/
 
 

@@ -9,6 +9,7 @@
   <%else%>
   <%= image_pack_tag('media/images/winter_apple_skelton.png', class: "image") %>
   <%end%>
+  <%= image_pack_tag('media/images/real_apple_kurinuki.png', id: "appleClicked", class: "real-apple image") %>
   <%if @is_cherry_bllosoming%>
   <%= image_pack_tag('media/images/cherry_blossom.gif', class: "image")%>
   <%end%>
@@ -32,4 +33,17 @@
     <%=%>
   </div>
 </div>
+
+<script>
+  const realApple = document.getElementById('appleClicked');
+
+  realApple.addEventListener('mousedown', appearApple);
+  function appearApple(e) {
+    e.target.style.opacity = 1;
+  }
+  realApple.addEventListener('mouseup', disAppearApple);
+  function disAppearApple(e) {
+    e.target.style.opacity = 0;
+  }
+</script>
 
