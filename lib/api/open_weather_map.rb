@@ -1,5 +1,8 @@
 module Api
   class OpenWeatherMap
+    # https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=current,minutely,daily,alerts&appid={API key}
+    # one_callAPI使えそうだけども。
+    # これで、hourlyの天気が取れる。48時間分取れるらしい。おそらく一つ目が最新のデータになるのでは？？
     URI = "https://api.openweathermap.org/data/2.5/weather"
     LATTITUDE = "35.7402"
     LONGITUDE = "139.6845"

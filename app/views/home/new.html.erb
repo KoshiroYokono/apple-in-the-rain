@@ -28,8 +28,65 @@
     <span></span><span></span><span></span><span></span><span></span>
   </div>
   <%end%>
-  <div class="api-test">
-    <%=%>
-  </div>
+  <h1 class="quiz button" id="modalOpen">Q</h1>
+    <div id="easyModal" class="modal">
+      <div class="modal-content" id="innerModal">
+        <div class="numbers">
+          <p class="number">I2O1</p>
+          <p class="number">I3O2</p>
+          <p class="number">I5O4</p>
+          <p class="number">?</p>
+          <p class="number">I13O12</p>
+          <%= form_with url: question_answer_create_path , class: "form" do |f| %>
+            <span class=form-item>? = </span>
+            <%= f.text_field :answer ,class:"form-item" %>
+            <%= f.submit "Check" ,class:"form-item"%>
+          <% end %>
+        </div>
+        <span class="modalClose">×</span>
+      </div>
+    </div>
 </div>
+
+<script>
+  const buttonOpen = document.getElementById('modalOpen');
+  const modal = document.getElementById('easyModal');
+  const innerModal  = document.getElementById('innerModal');
+  const buttonClose = document.getElementsByClassName('modalClose')[0];
+
+  //ボタンがクリックされた時
+  buttonOpen.addEventListener('click', modalOpen);
+  function modalOpen() {
+    modal.style.display = 'block';
+    setTimeout(() => {
+      modal.style.backgroundColor = 'rgba(0,0,0,0.5)';
+      innerModal.style.opacity = 1;
+      addEventListener('click', outsideClose);
+    }, 100);
+  };
+
+  //バツ印がクリックされた時
+  buttonClose.addEventListener('click', modalClose);
+  function modalClose() {
+    removeEventListener('click', outsideClose);
+    modal.style.backgroundColor = 'rgba(0,0,0,0)';
+    innerModal.style.opacity = 0;
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 2000);
+  };
+
+  //モーダルコンテンツ以外がクリックされた時
+  addEventListener('click', outsideClose);
+  function outsideClose(e) {
+    if (e.target == modal) {
+      removeEventListener('click', outsideClose);
+      modal.style.backgroundColor = 'rgba(0,0,0,0)';
+      innerModal.style.opacity = 0;
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 2000);
+    };
+  };
+</script>
 
