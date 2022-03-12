@@ -102,6 +102,7 @@ body {
 .real-apple {
   opacity: 0;
   transition: opacity 1s;
+  -webkit-touch-callout: none;
 }
 
 /*widthは雨の太さ、heightは長さ*/

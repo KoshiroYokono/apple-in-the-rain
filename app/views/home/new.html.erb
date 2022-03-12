@@ -35,6 +35,11 @@
 </div>
 
 <script>
+  window.oncontextmenu = function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+  };
   const realApple = document.getElementById('appleClicked');
 
   realApple.addEventListener('mousedown', appearApple);
